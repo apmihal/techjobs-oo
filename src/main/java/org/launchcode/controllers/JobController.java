@@ -60,6 +60,8 @@ public class JobController {
 
         jobData.add(newJob);
 
+        // The index handler needs an id # in order to display the proper job page.
+        // A RedirectAttributes object allows you to pass key value query params.
         redirectAttributes.addAttribute("id", newJob.getId());
         return "redirect:";
 
